@@ -8,12 +8,38 @@
 </head>
 <body>
     <section>
-       <div class="pulse">
+       <div class="pulse" style="display: flex; justify-content: center; align-items: center; position: relative;">
+            <div style="position: absolute; color: red; z-index: 999; font-weight: bolder;">
+                <h1>CLICK HERE</h1>
+            </div>
             <span style="--x:0"></span>
             <span style="--x:1"></span>
             <span style="--x:2"></span>
             <span style="--x:3"></span>
        </div>
     </section>
+
+    <script>
+        const pulse = document.querySelector('.pulse');
+        pulse.addEventListener('click', function(event) {
+            const section = document.querySelector('section');
+
+            if(section.classList.contains('section-animation')) {
+                section.classList.remove('section-animation');
+            } else {
+                section.classList.add('section-animation');
+            }
+
+            document.querySelectorAll('.pulse > span').forEach((span) => {
+                if(span.classList.contains('pulse-span-animation')) {
+                    span.classList.remove('pulse-span-animation')
+                } else {
+                    span.classList.add('pulse-span-animation')
+                }
+
+            }); 
+        });
+
+    </script>
 </body>
 </html>

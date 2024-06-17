@@ -9,7 +9,10 @@ section {
     align-items: center;
     min-height: 100vh;
     background : #102e37;
-    animation: colorAnimate 8s linear infinite;
+}
+
+.section-animation {
+    animation: colorAnimate 2s linear infinite;
 }
 
 .pulse {
@@ -20,10 +23,6 @@ section {
     border-radius: 50%;
 }
 
-/* .pulse:hover {
-    background: red;
-} */
-
 .pulse > span {
     position: absolute;
     width: 100%;
@@ -31,6 +30,9 @@ section {
     background: inherit;
     border-radius: inherit;
     opacity: 0.8;
+}
+
+.pulse-span-animation {
     animation: pulseAnimate 4s ease-out infinite;
     animation-delay: calc(1s * var(--x));
 }
