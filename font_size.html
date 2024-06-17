@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        :root {
+            font-size: 16px; /* Ukuran dasar untuk rem */
+        }
+
+
+        body {
+            font-size: 1rem; /* 16px */
+        }
+
+        /* Parent element dari container adalah body, sehingga relatif terhadap body */
+        .container {
+            font-size: 2em; /* 2 kali ukuran font body, yaitu 32px */
+        }
+        .child {
+            font-size: 0.5em; /* Setengah dari ukuran font induknya (.container), yaitu 16px */
+        }
+        .relative-to-root {
+            font-size: 2rem; /* 2 kali ukuran root (html), yaitu 32px */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        Ini adalah teks dalam .container (2em = 32px)
+        <div class="child">
+            Ini adalah teks dalam .child (.container 2em = 32px * 0.5em = 16px)
+        </div>
+    </div>
+    <div class="relative-to-root">
+        Ini adalah teks dalam .relative-to-root (2rem = 32px)
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="sample-container">
+        <!-- <div style="width: 300px; height: 300px; background-color: aquamarine;"></div>
+        <h1>Tantowi Putra</h1>
+
+        <button id="trigger-change">This is Button</button> -->
+        <h1>
+            <span id="jam">00</span>:<span id="menit">00</span>:<span id="detik">00</span>
+        </h1>
+    </div>
+</body>
+</html>
+
+<script>
+    var time = [2, 4, 6]
+
+    function updateTime() {
+        // jam menit dettk
+
+        time[2] = (time[2] + 1) % 60
+        if(time[2] == 0)  time[1] = (time[1] + 1) % 60
+        if(time[1] == 0)  time[0] = (time[0] + 1) % 24
+
+        document.querySelector("#jam").innerHTML = time[0] < 10 ? `0${time[0]}` : time[0]
+        document.querySelector("#menit").innerHTML = time[1] < 10 ? `0${time[1]}` : time[1];
+        document.querySelector("#detik").innerHTML = time[2] < 10 ? `0${time[2]}` : time[2];
+    }
+
+    setInterval(updateTime, 50, "Test")
+</script>
