@@ -1,0 +1,3 @@
+List Library:
+- https://prinzhorn.github.io/skrollr/ (Paralax Scrolling)
+- https://alvarotrigo.com/fullPage/#page4 (Scroll one Section at a Time)
